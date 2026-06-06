@@ -1,0 +1,164 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --text: #172033;
+  --muted: #64748b;
+  --line: #d8dee8;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --danger: #b42318;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.panel {
+  padding: 16px;
+}
+
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.controls {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+label {
+  display: grid;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font: inherit;
+  background: #fff;
+  color: var(--text);
+}
+
+.checkbox {
+  grid-template-columns: 18px 1fr;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.checkbox input {
+  width: 16px;
+  min-height: 16px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+button {
+  min-height: 36px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#runButton {
+  background: var(--primary);
+  color: #fff;
+}
+
+#runButton:hover {
+  background: var(--primary-hover);
+}
+
+#stopButton {
+  background: #fff;
+  color: var(--danger);
+  border-color: #f0c9c4;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.metric {
+  padding: 10px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.metric span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.metric strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+pre {
+  height: 120px;
+  margin: 0;
+  padding: 10px;
+  overflow: auto;
+  white-space: pre-wrap;
+  background: #111827;
+  color: #d1d5db;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.45;
+}

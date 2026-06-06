@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Drive Suggestion Cleaner",
+  "version": "0.1.0",
+  "description": "Mark Google Drive Home suggested files as not helpful, one by one.",
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Drive Suggestion Cleaner"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://drive.google.com/*"
+  ]
+}

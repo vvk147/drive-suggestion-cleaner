@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drive Suggestion Cleaner</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="panel">
+      <header>
+        <div>
+          <h1>Drive Suggestion Cleaner</h1>
+          <p id="pageState">Open Google Drive Home to run.</p>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Run controls">
+        <label>
+          <span>Max files</span>
+          <input id="maxItems" type="number" min="1" max="5000" step="1">
+        </label>
+
+        <label>
+          <span>Delay</span>
+          <select id="delayMs">
+            <option value="350">Fast</option>
+            <option value="700">Normal</option>
+            <option value="1200">Careful</option>
+          </select>
+        </label>
+
+        <label class="checkbox">
+          <input id="autoViewMore" type="checkbox">
+          <span>Click View more when visible</span>
+        </label>
+
+        <label class="checkbox">
+          <input id="stopOnStall" type="checkbox">
+          <span>Stop if the first row does not change</span>
+        </label>
+      </section>
+
+      <section class="actions" aria-label="Actions">
+        <button id="runButton" type="button">Run</button>
+        <button id="stopButton" type="button">Stop</button>
+      </section>
+
+      <section class="status" aria-live="polite">
+        <div class="metric">
+          <span>Cleared</span>
+          <strong id="clearedCount">0</strong>
+        </div>
+        <div class="metric">
+          <span>Status</span>
+          <strong id="statusText">Idle</strong>
+        </div>
+      </section>
+
+      <pre id="log" aria-label="Activity log"></pre>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

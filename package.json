@@ -1,0 +1,18 @@
+{
+  "name": "drive-suggestion-cleaner",
+  "version": "0.1.0",
+  "description": "Chrome extension to mark Google Drive Home suggested files as not helpful.",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "package": "npm run validate && zip -qr drive-suggestion-cleaner.zip manifest.json src README.md LICENSE"
+  },
+  "keywords": [
+    "chrome-extension",
+    "google-drive",
+    "productivity",
+    "mv3"
+  ]
+}
